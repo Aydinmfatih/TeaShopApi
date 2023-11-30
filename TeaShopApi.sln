@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopApi", "TeaShopApi\TeaShopApi.csproj", "{76CB3CDB-EB09-4DC1-AC53-380EF9C511E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaShopApi", "TeaShopApi\TeaShopApi.csproj", "{76CB3CDB-EB09-4DC1-AC53-380EF9C511E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopApi.EntityLayer", "TeaShopApi.EntityLayer\TeaShopApi.EntityLayer.csproj", "{333A3573-7AB1-4664-99AB-D61A2C7427DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaShopApi.EntityLayer", "TeaShopApi.EntityLayer\TeaShopApi.EntityLayer.csproj", "{333A3573-7AB1-4664-99AB-D61A2C7427DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopApi.DataAccessLayer", "TeaShopApi.DataAccessLayer\TeaShopApi.DataAccessLayer.csproj", "{DCFC4D56-3D8A-452C-95BD-A468C8C41B84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaShopApi.DataAccessLayer", "TeaShopApi.DataAccessLayer\TeaShopApi.DataAccessLayer.csproj", "{DCFC4D56-3D8A-452C-95BD-A468C8C41B84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopApi.BusinessLayer", "TeaShopApi.BusinessLayer\TeaShopApi.BusinessLayer.csproj", "{C01AF344-09BD-4DE7-A175-3BBF62D478B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaShopApi.BusinessLayer", "TeaShopApi.BusinessLayer\TeaShopApi.BusinessLayer.csproj", "{C01AF344-09BD-4DE7-A175-3BBF62D478B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopApi.DtoLayer", "TeaShopApi.DtoLayer\TeaShopApi.DtoLayer.csproj", "{C7DD40E0-8D6B-4CD2-A25F-F9C986F786A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopApi.WebUI", "TeaShopApi.WebUI\TeaShopApi.WebUI.csproj", "{054AEA6D-5D57-4D7A-98CB-BFBC35208F8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{C01AF344-09BD-4DE7-A175-3BBF62D478B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C01AF344-09BD-4DE7-A175-3BBF62D478B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C01AF344-09BD-4DE7-A175-3BBF62D478B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7DD40E0-8D6B-4CD2-A25F-F9C986F786A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7DD40E0-8D6B-4CD2-A25F-F9C986F786A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7DD40E0-8D6B-4CD2-A25F-F9C986F786A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7DD40E0-8D6B-4CD2-A25F-F9C986F786A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054AEA6D-5D57-4D7A-98CB-BFBC35208F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054AEA6D-5D57-4D7A-98CB-BFBC35208F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054AEA6D-5D57-4D7A-98CB-BFBC35208F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054AEA6D-5D57-4D7A-98CB-BFBC35208F8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

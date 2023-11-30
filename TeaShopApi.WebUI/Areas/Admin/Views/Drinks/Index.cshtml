@@ -1,0 +1,39 @@
+﻿@model List<TeaShopApi.WebUI.Dtos.DrinkDtos.ResultDrinkDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+	<!-- [ sample-page ] start -->
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-body">
+				<p>
+					<table class="table table-bordered">
+						<tr>
+							<th>#</th>
+							<th>İçecek Adı</th>
+							<th>İçecek Fiyatı</th>
+							<th>Sil</th>
+							<th>Güncelle</th>
+						</tr>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>@item.drinkId</td>
+								<td>@item.drinkName</td>
+								<td>@item.drinkPrice</td>
+								<th><a href="/Admin/Drinks/DeleteDrink/@item.drinkId" class="btn btn-outline-danger">Sil</a></th>
+								<th><a class="btn btn-outline-success">Güncelle</a></th>
+							</tr>
+						}
+					</table>
+					<th><a class="btn btn-outline-primary">Güncelle</a></th>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- [ sample-page ] end -->
+</div>
+
