@@ -1,0 +1,43 @@
+﻿@model List<ResultQuestionDto>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+	int count = 0;
+}
+
+<div class="row">
+	<!-- [ sample-page ] start -->
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h5>Soru Cevap işlemleri</h5>
+			</div>
+			<div class="card-body">
+				<p>
+					<table class="table table-bordered">
+						<tr>
+							<th>#</th>
+							<th>Soru</th>
+							<th>Cevap</th>
+							<th>Sil</th>
+							<th>Güncelle</th>
+						</tr>
+						@foreach (var item in Model)
+						{
+							count++;
+							<tr>
+								<td>@count</td>
+								<td>@item.QuestionDetail</td>
+								<td>@item.AnswerDetail</td>
+								<th><a href="/Admin/Questions/DeleteQuestion/@item.QuestionId" class="btn btn-outline-danger">Sil</a></th>
+								<th><a href="/Admin/Questions/UpdateQuestion/@item.QuestionId" class="btn btn-outline-success">Güncelle</a></th>
+							</tr>
+						}
+					</table>
+					<th><a href="/Admin/Questions/CreateQuestion" class="btn btn-outline-primary">Yeni Soru Girişi</a></th>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- [ sample-page ] end -->
+</div>
