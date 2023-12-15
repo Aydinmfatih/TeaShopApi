@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using TeaShopApi.WebUI.Dtos.ContactDto;
 using TeaShopApi.WebUI.Dtos.QuestionDtos;
 
 namespace TeaShopApi.WebUI.Areas.Admin.Controllers
 {
-    public class ContactController : Controller
+	[Area("Admin")]
+	[Route("[area]/[controller]/[action]/{id?}")]
+	public class ContactController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
@@ -13,14 +16,14 @@ namespace TeaShopApi.WebUI.Areas.Admin.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<IActionResult> Async()
+        public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7059/api/Contacts");
+            var responseMessage = await client.GetAsync("https://localhost:7059/api/Contact");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultQuestionDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<SendMessageDto>>(jsonData);
                 return View(values);
             }
             return View();

@@ -1,0 +1,43 @@
+﻿
+@model List<SendMessageDto>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+	int count = 0;
+}
+
+<div class="row">
+	<!-- [ sample-page ] start -->
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h5>Gelen Mesajlar</h5>
+			</div>
+			<div class="card-body">
+				<p>
+					<table class="table table-bordered">
+						<tr>
+							<th>#</th>
+							<th>Gönderen Adı</th>
+							<th>Gönderen Maili</th>
+							<th>Mesaj</th>
+							<th>Cevapla</th>
+						</tr>
+						@foreach (var item in Model)
+						{
+							count++;
+							<tr>
+								<td>@count</td>
+								<td>@item.Name</td>
+								<td>@item.Email</td>
+								<td>@item.Message</td>
+								<th><a href="#" class="btn btn-outline-info">Cevapla</a></th>
+							</tr>
+						}
+					</table>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- [ sample-page ] end -->
+</div>
