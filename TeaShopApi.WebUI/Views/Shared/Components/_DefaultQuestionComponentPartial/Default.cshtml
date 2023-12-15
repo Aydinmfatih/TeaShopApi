@@ -1,0 +1,38 @@
+﻿@model List<ResultQuestionDto>
+
+<div class="frequently_section layout_padding">
+    <div class="container">
+        <h1 class="frequently_taital">En Sık sorulan sorular</h1>
+        <p class="frequently_text">
+            En sık Sorulan soruları burdan görüntüleyebilirsiniz.
+        </p>
+        <div class="frequently_section_2 layout_padding">
+            <div class="bs-example">
+                <div class="accordion" id="accordionExample">
+                    @foreach (var item in Model)
+                    {
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button type="button" class="btn btn-link w-100" data-toggle="collapse"
+                                            data-target="#collapseOne">
+                                        <i class="fa fa-plus"></i>@item.QuestionDetail
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                 data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>
+                                         @item.AnswerDetail 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

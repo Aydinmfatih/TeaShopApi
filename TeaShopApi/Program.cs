@@ -28,6 +28,9 @@ namespace TeaShopApi
             builder.Services.AddScoped<IStatisticsDal, EfStatisticsDal>();
             builder.Services.AddScoped<IStatisticsService, StatisticsManager>();
 
+            builder.Services.AddScoped<IContactDal, EfContactDal>();
+            builder.Services.AddScoped<IContactService, ContactManager>();
+
 
 
             builder.Services.AddDbContext<TeaContext>();

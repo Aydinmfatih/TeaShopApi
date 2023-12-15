@@ -1,4 +1,4 @@
-﻿@model List<TeaShopApi.WebUI.Dtos.DrinkDtos.ResultDrinkDto>
+﻿@model List<ResultDrinkDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
@@ -18,6 +18,7 @@
 							<th>#</th>
 							<th>İçecek Adı</th>
 							<th>İçecek Fiyatı</th>
+							<th>İçecek Görseli</th>
 							<th>Sil</th>
 							<th>Güncelle</th>
 						</tr>
@@ -27,6 +28,7 @@
 								<td>@item.drinkId</td>
 								<td>@item.drinkName</td>
 								<td>@item.drinkPrice</td>
+								<td><img style="width:100px;height:75px" src="@item.drinkImageUrl"></td>
 								<th><a href="/Admin/Drinks/DeleteDrink/@item.drinkId" class="btn btn-outline-danger">Sil</a></th>
 								<th><a href="/Admin/Drinks/UpdateDrink/@item.drinkId" class="btn btn-outline-success">Güncelle</a></th>
 							</tr>

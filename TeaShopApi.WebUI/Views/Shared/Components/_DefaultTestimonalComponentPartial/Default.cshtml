@@ -1,0 +1,39 @@
+﻿@model List<ResultTestimonailDto>
+
+<div class="clients_section layout_padding">
+    <div id="custum_slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <h1 class="clients_taital">Memnun Müşterilerimiz</h1>
+                    <p class="clients_text">
+                        500+ den fazla mutlu müşterilerimizin söyledikleri
+                    </p>
+                    <div class="border"></div>
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="carousel-item">
+                    <div class="container">
+                        <h1 class="clients_taital">Memnun Müşterilerimiz</h1>
+                        <p class="clients_text">
+                           @item.TestimonialComment
+                        </p>
+                        <div class="client_img"><img style="width:100px;height:70px;border-radius:50%"  src="@item.TestimonialImageUrl"></div>
+                        <h1 class="louis_text">@item.TestimonialName</h1>
+                        <h1 class="smyth_text">Müşteri</h1>
+                        <div class="border"></div>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <a class="carousel-control-prev" href="#custum_slider" role="button" data-slide="next">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control-next" href="#custum_slider" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+</div>

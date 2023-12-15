@@ -1,0 +1,34 @@
+﻿<script src="~/teab-1.0.0/js/jquery.min.js"></script>
+<script src="~/teab-1.0.0/js/popper.min.js"></script>
+<script src="~/teab-1.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="~/teab-1.0.0/js/jquery-3.0.0.min.js"></script>
+<script src="~/teab-1.0.0/js/plugin.js"></script>
+<!-- sidebar -->
+<script src="~/teab-1.0.0/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="~/teab-1.0.0/js/custom.js"></script>
+<!-- javascript -->
+<script src="~/teab-1.0.0/js/owl.carousel.js"></script>
+<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
+        });
+
+</script>
+<script>
+    $(document).ready(function () {
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function () {
+            $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+        });
+
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function () {
+            $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function () {
+            $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });
+    });
+</script>

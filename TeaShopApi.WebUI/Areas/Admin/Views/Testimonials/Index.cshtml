@@ -1,0 +1,45 @@
+﻿@model List<ResultTestimonailDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="row">
+	
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h5>İçecek işlemleri</h5>
+			</div>
+			<div class="card-body">
+				<p>
+					<table class="table table-bordered">
+						<tr>
+							<th>#</th>
+							<th>Referans Adı</th>
+							<th>Referans Yorumu</th>
+							<th>Referans Görseli</th>
+							<th>Sil</th>
+							<th>Güncelle</th>
+						</tr>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>@item.TestimonialId</td>
+								<td>@item.TestimonialName</td>
+								<td>@item.TestimonialComment</td>
+								<td><img style="width:100px;height:75px" src="@item.TestimonialImageUrl"></td>
+								<th><a href="/Admin/Testimonials/DeleteTestimonail/@item.TestimonialId" class="btn btn-outline-danger">Sil</a></th>
+								<th><a href="/Admin/Testimonials/UpdateTestimonial/@item.TestimonialId" class="btn btn-outline-success">Güncelle</a></th>
+							</tr>
+						}
+					</table>
+					<a href="/Admin/Testimonials/CreateTestimonial" class="btn btn-outline-primary">Ekle</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- [ sample-page ] end -->
+</div>
+

@@ -1,0 +1,38 @@
+﻿@model SendMessageDto
+<div class="contact_section layout_padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mail_main">
+                    <h1 class="contact_taital">Bize ulaşın</h1>
+                    <form method="post" asp-action="SendMessage">
+                        <div class="form-group">
+                            <input type="text" class="email-bt" placeholder="İsim" asp-for="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="email-bt" placeholder="Email" asp-for="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="email-bt" placeholder="Konu" asp-for="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="massage-bt" placeholder="Mesajınız" rows="5" id="comment" asp-for="Message"></textarea>
+                        </div>
+
+                         <button class="btn btn-outline-success">Gönder</button>
+                    </form>
+                   
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map_main">
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France"
+                                width="600" height="600" frameborder="0" style="border:0; width: 100%;"
+                                allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
